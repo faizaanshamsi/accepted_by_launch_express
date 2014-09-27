@@ -27,8 +27,12 @@ function addTweetTextToList(tweet) {
   // $('.tweets ul').append('<li>' + constructListItem(tweet) + '</li>');
 };
 
+var count = 0;
 socket.on('connect', function () {
   socket.on('acceptanceTweet', function(tweet) {
+    count++;
+    var s = "Number of Tweets: " + count;
+    $('.counter').text(s);
     addTweetTextToList(tweet);
     console.log(tweet);
   });
