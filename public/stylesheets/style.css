@@ -1,8 +1,376 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html, body {
+  width: auto !important;
+  overflow-x: hidden !important;
 }
 
-a {
-  color: #00B7FF;
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background: #EEEEEE;
+  padding-bottom: 50px;
+}
+
+/*------------------ Layout -------------------*/
+.tiny-img {
+    border-radius: 200px;
+    border: 1px solid white;
+    height: 50px;
+    width: 50px;
+}
+
+.flash {
+  width: 100%;
+  height: 50px;
+  background: #ed197b !important;
+  text-align: center;
+  padding: 15px 10px 15px 20px;
+  color: white;
+}
+
+/*------------------ Header -------------------*/
+
+.roboto-sm {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background: #34495e;
+  border-bottom: 5px solid #2c3e50;
+  color: white;
+  margin-top: -20px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+.nav {
+  padding: 15px 0px 15px 50px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-links {
+  padding-top: 35px;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 100;
+}
+
+.login {
+  margin-top: 40px;
+}
+
+#nav-profile {
+  padding-top: 33px;
+}
+
+.nav-signout {
+  margin-right: 15px;
+}
+
+/*------------------ Intro -------------------*/
+
+.panel {
+  font-size: 20pt;
+}
+
+.panel-heading {
+  text-align: center;
+}
+
+.description {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 4em;
+  margin-bottom: 40px;
+}
+.button {
+  position: relative;
+  vertical-align: top;
+  width: 50%;
+  height: 50px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: white;
+  border: 0;
+  border-bottom: 2px solid #bdc3c7;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #bdc3c7;
+  box-shadow: inset 0 -1px #bdc3c7;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.blk {
+  color: black;
+}
+
+.white {
+  color: white;
+}
+
+.pink {
+  color: #ed197b;
+}
+
+.linkedin {
+  color: #1a85bc;
+}
+
+.thumbnail {
+  height: 50px;
+  width: 50px;
+  border-radius: 150px;
+}
+/*------------------ Jumbotron -------------------*/
+.jumbotron {
+  background: white;
+  background-image: url('../assets/class2.jpg');
+  background-position: center;
+  border-bottom: 3px solid #ed197b;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+  font-weight: 100;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+.jumbotron a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.jumbotron .login{
+  font-size: 2em;
+}
+
+.jumbo-content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.jumbotron .welcome {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 4em;
+  margin-top: 50px;
+  color:white;
+}
+.login-button {
+    position: relative;
+    vertical-align: top;
+    width: 50%;
+    height: 50px;
+    padding: 0;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #ed197b;
+    border: 0;
+    border-bottom: 2px solid #d60c67;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #d60c67;
+    box-shadow: inset 0 -1px #d60c67;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+/*------------------ Form -------------------*/
+.form-container {
+  margin-top: 100px;
+}
+
+.form label,
+.form h1 {
+  font-weight: 100;
+}
+
+.form form {
+  text-align: center;
+}
+
+.form {
+  width: 100%;
+  height: auto;
+  background: #ed197b;
+  border-bottom: 5px solid #d60c67;
+  color: white;
+  margin-top: -20px;
+  padding: 10px 30px 30px 30px;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn-submit {
+  background: white;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+form select,
+form input[type=text] {
+  width: 50%;
+  height: 40px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  background: #fff;
+  border: none;
+  color: #34495e;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  resize: none;
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+   color: #34495e;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #34495e;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #34495e;
+}
+
+:-ms-input-placeholder {
+   color: #34495e;
+}
+
+/*------------------ Award Nominations -------------------*/
+.make-nom {
+  font-weight: 100;
+}
+
+.award {
+  width: 100%;
+  height: 400px;
+  background: #34495e;
+  border-bottom: 5px solid #2c3e50;
+  color: white;
+  padding-top: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+  /*z-index: -1;*/
+}
+
+.prof-pic {
+  border-radius: 200px;
+  border: 3px solid white;
+  height: 200px;
+  width: 200px;
+}
+
+.launcher-name {
+  color:#ed197b;
+  font-weight: 100;
+}
+
+.title {
+  font-size: 5em;
+  margin-top: 100px;
+  font-weight: 100;
+}
+
+.asphalt {
+  color: #ed197b;
+}
+
+.about{
+  font-size: 3em;
+  font-weight: 100;
+  color: #34495e;
+}
+
+.name {
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.award-title {
+  font-weight: 100;
+}
+
+.ribbon {
+  height: 75px;
+}
+
+.over{
+  margin-top: -44px;
+  z-index: 1;
+  position: relative;
+  margin-left: -65%;
+}
+
+.top {
+  margin-top: -63px;
+  z-index: 2;
+  position: relative;
+  margin-left: -65%;
+}
+
+.under {
+  margin-top: -20px;
+  z-index: -1;
+}
+
+.votes {
+  font-size: 1.25em;
+}
+
+.votes form input[type=submit] {
+  background: #ed197b;
+  color: white;
+  border: none;
+  border-radius: 150px;
+}
+
+/*------------------ Footer -------------------*/
+.footer {
+  height: 200px;
+  width: 100%;
+  background: #ed197b;
+  border-bottom: 4px solid #d60c67;
+  margin-bottom: -50px;
+  margin-top: 100px;
+}
+
+.footer-info {
+  padding-top: 75px;
+}
+
+.powered {
+  margin-top: 15px;
+}
+/*------------------ Media Queries -------------------*/
+@media (min-width: 768px) {
+  .jumbotron {
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }

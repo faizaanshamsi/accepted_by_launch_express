@@ -1,24 +1,30 @@
 var socket = io.connect('http://localhost:4000');
 
-function constructListItem(tweet) {
-  var user = tweet["user"]["name"];
-  var text = tweet["text"];
+function image(tweet) {
   var result;
   if ( tweet["extended_entities"] !== undefined && tweet["extended_entities"]["media"][0]["media_url"] !== undefined )
     {
       var imageUrl = tweet["extended_entities"]["media"][0]["media_url"]
-      var imageTag = "<img src=\"" + imageUrl + "\">"
-      result = user + text + imageTag
+      var imageTag = "<img src=\"" + imageUrl + "\">     "
+      result = "\n" + imageTag
     }
   else
     {
-      result = user + text
+      result = ""
     }
   return result;
 }
 
 function addTweetTextToList(tweet) {
-  $('.tweets ul').append('<li>' + constructListItem(tweet) + '</li>');
+  $('.container').prepend(
+    "<div class='row'>" +
+       "<div class='panel panel-primary'>" +
+         "<div class='panel panel-heading'>" + tweet["user"]["name"] + "</div>" +
+         "<div class='panel panel-body'>" + image(tweet) + tweet["text"] + "</div>" +
+       "</div>" +
+     "</div>"
+    );
+  // $('.tweets ul').append('<li>' + constructListItem(tweet) + '</li>');
 };
 
 socket.on('connect', function () {
