@@ -79,4 +79,4 @@ t.on('error', function (err) {
   console.log('Oh no')
 });
 
-t.track('apple')
+t.track('accepted_by_launch')
