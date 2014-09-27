@@ -57,6 +57,10 @@ app.use(function(err, req, res, next) {
 });
 
 
+app.set('port', (process.env.PORT || 5000))
+
+app.listen(app.get('port'))
+
 module.exports = app;
 
 var io = require('socket.io').listen(process.env.PORT || 5000);
