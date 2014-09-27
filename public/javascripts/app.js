@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:4000');
+var socket = io.connect(window.location.hostname);
 
 function constructListItem(tweet) {
   var user = tweet["user"]["name"];

@@ -59,7 +59,7 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-var io = require('socket.io').listen(4000);
+var io = require('socket.io').listen(process.env.PORT || 5000);
 
 var Twitter = require('node-tweet-stream')
 var t = new Twitter({
