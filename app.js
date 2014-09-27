@@ -56,14 +56,9 @@ app.use(function(err, req, res, next) {
     });
 });
 
-
-app.set('port', (process.env.PORT || 5000))
-
-app.listen(app.get('port'))
-
 module.exports = app;
 
-var io = require('socket.io').listen(process.env.PORT || 5000);
+var io = require('socket.io').listen(4000);
 
 var Twitter = require('node-tweet-stream')
 var t = new Twitter({
