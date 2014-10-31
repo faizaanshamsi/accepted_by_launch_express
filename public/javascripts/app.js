@@ -24,7 +24,6 @@ function addTweetTextToList(tweet) {
        "</div>" +
      "</div>"
     );
-  // $('.tweets ul').append('<li>' + constructListItem(tweet) + '</li>');
 };
 
 var count = 0;

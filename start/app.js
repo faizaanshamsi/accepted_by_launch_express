@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
+var users = require('./routes/users');
 
 var app = express();
 
@@ -22,6 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -54,26 +56,5 @@ app.use(function(err, req, res, next) {
     });
 });
 
+
 module.exports = app;
-
-var io = require('socket.io').listen(4000);
-
-var Twitter = require('node-tweet-stream')
-var t = new Twitter({
-    consumer_key: process.env.CONSUMER_KEY,
-    consumer_secret: process.env.CONSUMER_SECRET,
-    token: process.env.TOKEN,
-    token_secret: process.env.TOKEN_SECRET
-  })
-
-
-t.on('tweet', function (tweet) {
-  console.log(tweet);
-  io.emit("acceptanceTweet", tweet);
-})
-
-t.on('error', function (err) {
-  console.log('Oh no')
-});
-
-t.track('samsung')
